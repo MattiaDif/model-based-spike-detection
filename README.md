@@ -18,3 +18,19 @@ To clone this repo open your terminal and run:
 `git clone https://github.com/MattiaDif/model-based-spike-detection.git`
 
 Rember to add the repo to the Matlab path!
+
+## Repo description
+
+SingleChannelModels: folder that contains the Simulink model for spike detection in single-channel modality subdivided by category. The files named with the prefix float_sch are the spike detection Simulink models, while the files named with the prefix float_sch_run are the Matlab scripts to control the model parameters and lunch the simulation.
+
+MultiChannelModels: folder that contains the Simulink model for spike detection in mutli-channel modality subdivided by category. The files named with the prefix float_mch are the spike detection Simulink models, while the files named with the prefix float_mch_run are the Matlab scripts to control the model parameters and lunch the simulation.
+
+## Background
+
+Different spike detection models has been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
+1. Sample Thresholding: a spike is detected if the sample overcomes a threshold.
+2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content. A spike is detected if the NEO sample overcomes a threshold.
+3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
+
+## Reference
+
