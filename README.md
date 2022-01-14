@@ -27,12 +27,11 @@ MultiChannelModels: folder that contains the Simulink model for spike detection 
 
 TestData: folder that contains data for testing the model in Simulink (see the reame.txt file in the folder for further details).
 
+Recording_Generator: Python scripts to generate simulated multichannel recording exploting MEArec ([MEArec repo](https://github.com/alejoe91/MEArec.git)).
+
 ## Background
 
 Different spike detection models has been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
 1. Sample Thresholding: a spike is detected if the sample overcomes a threshold.
 2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content. A spike is detected if the NEO sample overcomes a threshold.
 3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
-
-## Reference
-
