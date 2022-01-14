@@ -3,6 +3,11 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
 mdl_name = "float_sch_Sample_HardThreshold";
 
 
@@ -10,19 +15,19 @@ mdl_name = "float_sch_Sample_HardThreshold";
 fs = 30000; %Hz - sampling frequency
 fn = fs/2;  %Hz - Nyquist frequency
 refractory = 10^-3; %refractory period
-th=[-20]; % sweeping  thresholds
+th=[-40:5:-10]; % sweeping  thresholds
 sim_type = 'normal'; %simulation speed
-sim_stop_time = '5';   %s
+sim_stop_time = '180';   %s
 
 
 %% Performance analysis parameters
 w_len = fs/1000;  %samples --> 1ms
 peak_diff = 15; %samples --> max spike position distance between recording and ground truth
-spiketrain = 1; %ground_truth selected for performance evaluation
+spiketrain = 3; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
 
 %% Data loading
-filename = 'monotrode_test_20';
+filename = 'ch10_neuronexus32_recording_10';
 
 signal = load([filename,'.mat']);
 ground = load([filename,'_gt.mat']);
@@ -116,8 +121,8 @@ end
 
 
 %% ROC, confusion matrix, AUC
-FPrate = [1 FPrate 0];
-TPrate = [1 TPrate 0];
+FPrate = [0 FPrate 1];
+TPrate = [0 TPrate 1];
 
 figure
 plot(flip(FPrate),flip(TPrate),'r','LineWidth',2)
