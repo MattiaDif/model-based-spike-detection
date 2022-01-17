@@ -25,7 +25,7 @@ SingleChannelModels: folder that contains the Simulink model for spike detection
 
 MultiChannelModels: folder that contains the Simulink model for spike detection in mutli-channel modality subdivided by category. The files named with the prefix float_mch are the spike detection Simulink models, while the files named with the prefix float_mch_run are the Matlab scripts to control the model parameters and lunch the simulation.
 
-TestData: folder that contains data for testing the model in Simulink (see the reame.txt file in the folder for further details).
+TestData: folder that contains data for testing the model in Simulink (see the readme.txt file in the folder for further details).
 
 ## Background
 
