@@ -3,6 +3,15 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
+if isfile('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat')
+    load 'D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat'; %result structureù
+end
+
 mdl_name = "float_sch_WindowDiscriminator";
 
 

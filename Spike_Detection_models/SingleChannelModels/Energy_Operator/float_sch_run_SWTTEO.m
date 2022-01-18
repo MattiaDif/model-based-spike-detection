@@ -3,29 +3,63 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
+if isfile('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat')
+    load 'D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat'; %result structureù
+end
+
+
+
 mdl_name = "float_sch_SWTTEO";
 
 
-%wavelet generation
+%wavelet
 wname = 'sym5';
 iter = 2;
-[phi,psi,xval] = wavefun(wname,iter);
-wav = psi;
+%[phi,psi,xval] = wavefun(wname,iter);
+wav_approx = [-0.019538882735286728
+                -0.021101834024758855
+                0.17532808990845047
+                0.01660210576452232
+                -0.6339789634582119
+                0.7234076904024206
+                -0.1993975339773936
+                -0.039134249302383094
+                -0.029519490925774643
+                0.027333068345077982
+                ]';  %sym5 decomposition high-pass filter
+    
+% wav_detail = [0.027333068345077982
+%                 0.029519490925774643
+%                 -0.039134249302383094
+%                 0.1993975339773936
+%                 0.7234076904024206
+%                 0.6339789634582119
+%                 0.01660210576452232
+%                 -0.17532808990845047
+%                 -0.021101834024758855
+%                 0.019538882735286728
+%                 ]'; %sym5 decomposition low-pass filter
+
 
 
 %% Simulation parameters
 fs = 30000; %Hz - sampling frequency
 fn = fs/2;  %Hz - Nyquist frequency
 refractory = 10^-3; %refractory period
-TEO_buffer = length(psi)-1;    %TEO buffer length
-TEO_buffer_overlap = TEO_buffer - 1;    %TEO buffer overlap
+TEO_buffer = length(wav_approx)-1;    %TEO buffer length
+TEO_buffer_overlap = 0;    %TEO buffer overlap
 feature_buffer = fs;    %feature buffer length
-feature_gain = [1];   %adaptive threshold gain
+feature_gain = [3];   %adaptive threshold gain
 hamming_w_length = 32;  %hamming window length in samples
 buffer_hamming_length = hamming_w_length;   %buffer length before smoothing in samples
 buffer_hamming_length_overlap = buffer_hamming_length - 1;
 sim_type = 'normal'; %simulation speed
-sim_stop_time = '5';   %s
+sim_stop_time = '10';   %s
 
 
 
@@ -33,11 +67,11 @@ sim_stop_time = '5';   %s
 %% Performance analysis parameters
 w_len = fs/1000;  %samples --> 1ms
 peak_diff = 25; %samples --> max spike position distance between recording and ground truth
-spiketrain = 1; %ground_truth selected for performance evaluation
+spiketrain = 3; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
 
 %% Data loading
-filename = 'monotrode_test_20';
+filename = 'ch15_neuronexus32_recording_10';
 
 signal = load([filename,'.mat']);
 ground = load([filename,'_gt.mat']);
@@ -150,6 +184,17 @@ AUC = -trapz(FPrate,TPrate);
 
 
 
+%% Saving resuls
+
+type = strcat([mdl, '_', filename(end-1:end)]);
+
+result.(type).AUC = AUC;
+result.(type).FPrate = FPrate;
+result.(type).TPrate = TPrate;
+result.(type).threshold = feature_gain;
+result.(type).noise_level = str2double(filename(end-1:end));
+
+save('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat','result');
 
 
 

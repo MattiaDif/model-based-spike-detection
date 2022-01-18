@@ -3,6 +3,16 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
+if isfile('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat')
+    load 'D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat'; %result structureù
+end
+
+
 mdl_name = "float_sch_PTSD";
 
 
@@ -134,6 +144,18 @@ AUC = -trapz(FPrate,TPrate);
 
 
 
+
+%% Saving resuls
+
+type = strcat([mdl, '_', filename(end-1:end)]);
+
+result.(type).AUC = AUC;
+result.(type).FPrate = FPrate;
+result.(type).TPrate = TPrate;
+result.(type).threshold = diff_th;
+result.(type).noise_level = str2double(filename(end-1:end));
+
+save('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat','result');
 
 
 
