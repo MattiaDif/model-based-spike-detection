@@ -27,9 +27,9 @@ Inside Spike_Detection_Models:
 
 2. MultiChannelModels: folder that contains the Simulink model for spike detection in mutli-channel modality subdivided by category. The files named with the prefix float_mch are the spike detection Simulink models, while the files named with the prefix float_mch_run are the Matlab scripts to control the model parameters and lunch the simulation.
 
-2. TestData: folder that contains data for testing the model in Simulink (see the reame.txt file in the folder for further details).
+3. TestData: folder that contains data for testing the model in Simulink (see the reame.txt file in the folder for further details).
 
-Recording_Generator: folder that contains Python scripts to generate simulated multichannel recording exploting MEArec ([MEArec repo](https://github.com/alejoe91/MEArec.git)).
+4. Recording_Generator: folder that contains Python scripts to generate simulated multichannel recording exploting MEArec ([MEArec repo](https://github.com/alejoe91/MEArec.git)).
 
 ## Background
 
