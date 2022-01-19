@@ -15,7 +15,7 @@ end
 
 mdl_name = "float_sch_Sample_HardThreshold";
 
-noise_level = {'30'};
+noise_level = {'10' '20' '30'};
 
 
 %% Simulation parameters
@@ -35,6 +35,9 @@ spiketrain = 3; %ground_truth selected for performance evaluation
 
 
 for i = 1:length(noise_level)
+    
+    FPrate = [];
+    TPrate = [];
 
     %% Data loading
     filename = ['ch15_neuronexus32_recording_',char(noise_level(i))]
