@@ -6,9 +6,10 @@ This work aimed at designing and implementing in Simulink environment different 
 
 <br />
 
+
+![alt text](https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/SNEO.png?raw=true)
+
 <p>
-    <img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/SNEO.png">
-    <figcaption  align = "center"> 
     <b>Fig.1 - SNEO Simulink model</b></figcaption>
 </p>
 
