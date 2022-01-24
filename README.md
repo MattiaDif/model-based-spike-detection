@@ -31,6 +31,7 @@ Inside Spike_Detection_Models:
 
 4. Recording_Generator: folder that contains Python scripts to generate simulated multichannel recording exploting MEArec ([MEArec repo](https://github.com/alejoe91/MEArec.git)).
 
+
 ## Background
 
 Different spike detection models has been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
