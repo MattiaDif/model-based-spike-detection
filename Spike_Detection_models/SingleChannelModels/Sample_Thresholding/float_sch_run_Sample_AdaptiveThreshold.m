@@ -138,7 +138,7 @@ title('Hard Threshold ROC')
 set(gca,'FontSize',14)
 axis([0 1 0 1])
 
-AUC = -trapz(FPrate,TPrate);
+AUC = abs(trapz(FPrate,TPrate));
 
 
     %% Saving resuls
