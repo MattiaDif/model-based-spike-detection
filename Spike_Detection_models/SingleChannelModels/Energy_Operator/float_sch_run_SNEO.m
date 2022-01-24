@@ -3,6 +3,11 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
 mdl_name = "float_sch_SNEO";
 
 
@@ -137,6 +142,16 @@ axis([0 1 0 1])
 AUC = -trapz(FPrate,TPrate);
 
 
+
+%% Saving resuls
+
+type = strcat([mdl, '_', filename(end-1:end)]);
+
+result.(type).AUC = AUC;
+result.(type).FPrate = FPrate;
+result.(type).TPrate = TPrate;
+result.(type).threshold = feature_gain;
+result.(type).noise_level = str2double(filename(end-1:end));
 
 
 

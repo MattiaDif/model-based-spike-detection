@@ -3,6 +3,12 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
+
 mdl_name = "float_mch_LocalMaxima_HardThreshold";
 
 

@@ -3,6 +3,11 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
 mdl_name = "float_sch_SigmaDelta_AdaptiveThreshold";
 
 
@@ -139,7 +144,7 @@ title('SigmaDelta ROC')
 set(gca,'FontSize',14)
 axis([0 1 0 1])
 
-AUC = -trapz(FPrate,TPrate);
+AUC = abs(trapz(FPrate,TPrate));
 
 
 

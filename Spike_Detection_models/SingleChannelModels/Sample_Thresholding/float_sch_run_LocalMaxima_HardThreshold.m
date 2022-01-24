@@ -3,29 +3,39 @@ close all
 clc
 
 
+if(~isdeployed)
+    cd(fileparts(which(mfilename)));
+end
+
+
 mdl_name = "float_sch_LocalMaxima_HardThreshold";
+
 
 
 %% Simulation parameters
 fs = 30000; %Hz - sampling frequency
 fn = fs/2;  %Hz - Nyquist frequency
 refractory = 10^-3; %refractory period
-th=[-60]; % sweeping  thresholds
-sim_type = 'Normal'; %simulation speed
+th=[-80]; % sweeping  thresholds
+sim_type = 'normal'; %simulation speed
 sim_stop_time = '5';   %s
 
 
 %% Performance analysis parameters
 w_len = fs/1000;  %samples --> 1ms
 peak_diff = 15; %samples --> max spike position distance between recording and ground truth
-spiketrain = 1; %number of ground_truth
+spiketrain = 2; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
+
+
 
 %% Data loading
 filename = 'monotrode_test_20';
 
 signal = load([filename,'.mat']);
 ground = load([filename,'_gt.mat']);
+
+% ground.ground_truth = ground.ground_truth([1,3],:);
 
 
 %% Simulation with different thresholds
@@ -51,23 +61,24 @@ out = sim(in,'ShowProgress', 'on');
 
 %% Get simulation output
 for curr_sim = 1:numSims
-    
+
     simOut = out(curr_sim);
-    ground_truth_ts(curr_sim,:) = simOut.logsout.get('ground_truth').Values;
-    recording_ts(curr_sim,:) = simOut.logsout.get('recording').Values;
-    sample_above_th_ts(curr_sim,:) = simOut.logsout.get('sample_above_th').Values;
-    spikes_ts(curr_sim,:) = simOut.logsout.get('spikes').Values;
-    interspike_ts(curr_sim,:) = simOut.logsout.get('interspike').Values;
+    ground_truth_ts(curr_sim,:) = simOut.tmp_raccel_logsout  .get('ground_truth').Values;
+    recording_ts(curr_sim,:) = simOut.tmp_raccel_logsout  .get('recording').Values;
+    sample_above_th_ts(curr_sim,:) = simOut.tmp_raccel_logsout  .get('sample_above_th').Values;
+    spikes_ts(curr_sim,:) = simOut.tmp_raccel_logsout  .get('spikes').Values;
+    interspike_ts(curr_sim,:) = simOut.tmp_raccel_logsout  .get('interspike').Values;
 
     recording(curr_sim,:) = recording_ts(curr_sim).Data;
     sample_above_th(curr_sim,:) = sample_above_th_ts(curr_sim).Data;
     spikes(curr_sim,:) = spikes_ts(curr_sim).Data;
     interspike(curr_sim,:) = interspike_ts(curr_sim).Data;
-    
+
     ground_truth(curr_sim,:) = zeros(1,size(recording,2));
     for train = 1:spiketrain
         ground_truth(curr_sim,:) = ground_truth(curr_sim,:) + ground_truth_ts(curr_sim).Data(:,train)';
     end
+
 
     % Performance evaluation
     P(curr_sim) = sum(round(ground_truth(curr_sim,:)));    %P    %round due to some quantization error (some samples were e-11 instead of 0)
@@ -88,7 +99,6 @@ for curr_sim = 1:numSims
             TP(curr_sim) = TP(curr_sim) + 1;
         end
     end
-    
 
     FN(curr_sim) = P(curr_sim) - TP(curr_sim);
     FP(curr_sim) = NDS(curr_sim) - TP(curr_sim);
@@ -115,9 +125,10 @@ for curr_sim = 1:numSims
 end
 
 
-%% ROC, AUC
-FPrate = [1 FPrate 0];
-TPrate = [1 TPrate 0];
+
+%% ROC, confusion matrix, AUC
+FPrate = [0 FPrate 1];
+TPrate = [0 TPrate 1];
 
 figure
 plot(flip(FPrate),flip(TPrate),'r','LineWidth',2)
@@ -127,6 +138,17 @@ title('Hard Threshold ROC')
 set(gca,'FontSize',14)
 axis([0 1 0 1])
 
-AUC = -trapz(FPrate,TPrate);
+AUC = abs(-trapz(FPrate,TPrate));
+
+
+%% Saving resuls
+
+% type = strcat([char(channel(j)),'_',mdl, '_', filename(end-1:end)]);
+% 
+% result.(type).AUC = AUC;
+% result.(type).FPrate = FPrate;
+% result.(type).TPrate = TPrate;
+% result.(type).threshold = th;
+% result.(type).noise_level = str2double(filename(end-1:end));
 
 
