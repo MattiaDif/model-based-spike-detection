@@ -18,7 +18,7 @@ fn = fs/2;  %Hz - Nyquist frequency
 refractory = 10^-3; %refractory period
 th=[-80]; % sweeping  thresholds
 sim_type = 'normal'; %simulation speed
-sim_stop_time = '30';   %s
+sim_stop_time = '5';   %s
 
 
 %% Performance analysis parameters
@@ -30,7 +30,7 @@ spiketrain = 2; %ground_truth selected for performance evaluation
 
 
 %% Data loading
-filename = [char(channel(j)),'_tetrode_recording_',char(noise_level(i))]
+filename = 'monotrode_test_20';
 
 signal = load([filename,'.mat']);
 ground = load([filename,'_gt.mat']);

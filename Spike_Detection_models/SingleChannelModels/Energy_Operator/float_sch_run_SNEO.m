@@ -8,11 +8,6 @@ if(~isdeployed)
 end
 
 
-if isfile('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat')
-    load 'D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat'; %result structure
-end
-
-
 mdl_name = "float_sch_SNEO";
 
 
@@ -26,7 +21,7 @@ TEO_buffer_overlap = TEO_buffer - 1;    %TEO buffer overlap
 feature_buffer = fs;    %feature buffer length
 feature_gain = [1];   %adaptive threshold gain
 sim_type = 'normal'; %simulation speed
-sim_stop_time = '10';   %s
+sim_stop_time = '5';   %s
 
 
 %% Performance analysis parameters
@@ -36,7 +31,7 @@ spiketrain = 1; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
 
 %% Data loading
-filename = 'ch15_neuronexus32_recording_10';
+filename = 'monotrode_test_20';
 
 signal = load([filename,'.mat']);
 ground = load([filename,'_gt.mat']);
@@ -158,7 +153,6 @@ result.(type).TPrate = TPrate;
 result.(type).threshold = feature_gain;
 result.(type).noise_level = str2double(filename(end-1:end));
 
-save('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat','result');
 
 
 

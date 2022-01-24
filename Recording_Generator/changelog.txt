@@ -1,6 +1,5 @@
 file for the generation of recordings and templates using neuron model of the BBP dataset
 
-15/04/21
 -plotting --> plot the generating recordings
 -plotting_multinoise -->  plot the generating recordings with different level of noise
 
