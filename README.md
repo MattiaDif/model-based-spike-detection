@@ -1,3 +1,5 @@
+[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/105655-model-based-spike-detection)
+
 # Model-based online implementation of spike detection algorithms for neuroengineering applications
 
 This work aimed at designing and implementing in Simulink environment different kind of spike detection algorithms to evaluate the best candidate for the target embedded implementation of a closed-loop system. Moreover, by exploiting a model-based design approach it is possible to simulate, analyze and forecast pros and cons of the code execution on hardware and to conduct preliminary observations about how the algorithms behave in real-time.
@@ -5,11 +7,17 @@ This work aimed at designing and implementing in Simulink environment different 
 <br />
 
 <p>
-    <img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/SNEO.png" width=100% height=100%>
-    <figcaption  align = "center"> <b>Fig.1 - SNEO Simulink model</b></figcaption>
+    <img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/SNEO.png">
+    <figcaption  align = "center"> 
+    <b>Fig.1 - SNEO Simulink model</b></figcaption>
 </p>
 
 <br />
+
+## Required Software
+
+1. Matlab version R2020a or later
+
 
 ## Installation
 
