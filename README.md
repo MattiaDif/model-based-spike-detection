@@ -1,4 +1,4 @@
-[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/105655-model-based-spike-detection)
+[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/105670-model-based-spike-detection)
 
 # Model-based online implementation of spike detection algorithms for neuroengineering applications
 
