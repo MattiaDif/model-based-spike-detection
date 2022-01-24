@@ -8,10 +8,6 @@ if(~isdeployed)
 end
 
 
-if isfile('D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat')
-    load 'D:\GitHub\model-based-spike-detection\Spike_Detection_models\Results\result.mat'; %result structureù
-end
-
 mdl_name = "float_sch_WindowDiscriminator";
 
 
@@ -159,7 +155,7 @@ title('Hard Threshold ROC')
 set(gca,'FontSize',14)
 axis([0 1 0 1])
 
-AUC = -trapz(FPrate,TPrate);
+AUC = abs(trapz(FPrate,TPrate));
 
 
 
