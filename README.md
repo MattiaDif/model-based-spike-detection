@@ -47,3 +47,16 @@ Different spike detection models has been developed in Simulink to investigate t
 1. Sample Thresholding: a spike is detected if the sample overcomes a threshold.
 2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content. A spike is detected if the NEO sample overcomes a threshold.
 3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
+
+
+## CORE TEAM
+The following people have contributed to the current state of the project (24/01/2022). Specifically:
+- Development: [Stefano Buccelli](https://www.iit.it/it/people-details/-/people/stefano-buccelli) [1], [Mattia Di Florio](https://rubrica.unige.it/personale/UUZFUllo) [1],[3].
+- Conceptualization/Supervision: [Vijay Iyer](https://www.mathworks.com/matlabcentral/profile/authors/6910229) [2], [Akshay Rajhans](https://www.mathworks.com/matlabcentral/profile/authors/4409783) [2], [Stefano Buccelli](https://www.iit.it/it/people-details/-/people/stefano-buccelli) [1], [Michela Chiappalone](https://rubrica.unige.it/personale/UkNHWlNg) [1],[3].
+
+For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gmail.com) or Stefano Buccelli (stefano.buccelli@iit.it) or write an issue!
+
+1. Rehab Technologies IIT-INAIL Lab, Istituto Italiano di Tecnologia, Via Morego 30, 12 16163 Genova, Italy
+2. The MathWorks, Inc.
+3.  Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
+
