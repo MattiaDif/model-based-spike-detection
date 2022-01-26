@@ -57,6 +57,6 @@ The following people have contributed to the current state of the project (24/01
 For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gmail.com) or Stefano Buccelli (stefano.buccelli@iit.it) or write an issue!
 
 1. Rehab Technologies IIT-INAIL Lab, Istituto Italiano di Tecnologia, Via Morego 30, 12 16163 Genova, Italy
-2. The MathWorks, Inc.
+2. MathWorks, 1 Lakeside Campus Drive, Natick, MA 01760, USA
 3.  Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
 
