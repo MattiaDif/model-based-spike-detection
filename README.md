@@ -2,7 +2,7 @@
 
 # Model-based online implementation of spike detection algorithms for neuroengineering applications
 
-In this work, our goal is to design and test different spike detection algorithms in Simulink® to evaluate the best candidate for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. This Model-Based Design approach enables us to (i) simulate, analyze, and forecast pros and cons of the code execution on target hardware, and (ii) conduct preliminary checks about how the algorithms would behave in real-time.
+Spike detection algorithms development in Simulink® to evaluate the preferable contestant for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. A Model-Based Design approach for neuroengineering applications enables to (i) simulate, and forecast pros and cons of the code execution on target hardware, and (ii) carry out preliminary analysis about the algorithms conduct in real-time.
 
 <br />
 
