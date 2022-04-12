@@ -6,11 +6,19 @@ Spike detection algorithms development in Simulink® to evaluate the preferable 
 
 <br />
 
+![alt text](https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/models.png?raw=true)
+
+<p>
+    <b>Fig.1 - Spike detection models developed in both single- and multi-channel modality</b></figcaption>
+</p>
+
+<br />
+<br />
 
 ![alt text](https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/SNEO.png?raw=true)
 
 <p>
-    <b>Fig.1 - SNEO Simulink model</b></figcaption>
+    <b>Fig.2 - SNEO Simulink model</b></figcaption>
 </p>
 
 <br />
