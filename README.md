@@ -17,7 +17,7 @@ Spike detection algorithms development in Simulink® to evaluate the preferable 
 
 ## Required Software
 
-1. Matlab version R2020a or later
+1. MATLAB® and Simulink® version R2020a or later
 
 
 ## Installation
