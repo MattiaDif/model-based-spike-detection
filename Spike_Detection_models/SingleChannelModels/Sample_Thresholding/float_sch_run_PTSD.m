@@ -27,7 +27,7 @@ sim_stop_time = '5';   %s
 %% Performance analysis parameters
 w_len = fs/1000;  %samples --> 1ms
 peak_diff = 15; %samples --> max spike position distance between recording and ground truth
-spiketrain = 2; %ground_truth selected for performance evaluation
+spiketrain = 1; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
 
 
