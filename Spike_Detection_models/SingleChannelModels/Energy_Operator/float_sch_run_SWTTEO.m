@@ -61,7 +61,7 @@ sim_stop_time = '5';   %s
 %% Performance analysis parameters
 w_len = fs/1000;  %samples --> 1ms
 peak_diff = 25; %samples --> max spike position distance between recording and ground truth
-spiketrain = 3; %ground_truth selected for performance evaluation
+spiketrain = 1; %ground_truth selected for performance evaluation
 %peak_diff --> tolerance
 
 
@@ -110,15 +110,18 @@ for curr_sim = 1:numSims
     spikes_ts(curr_sim,:) = simOut.logsout.get('spikes').Values;
     interspike_ts(curr_sim,:) = simOut.logsout.get('interspike').Values;
 
-    ground_truth(curr_sim,:) = ground_truth_ts(curr_sim).Data(:,spiketrain);
-    recording(curr_sim,:) = recording_ts(curr_sim).Data;
-    SWTTEO(curr_sim,:) = SWTTEO_ts(curr_sim).Data;
-    threshold(curr_sim,:) = threshold_ts(curr_sim).Data;
-    SWTTEO_above_th(curr_sim,:) = SWTTEO_above_th_ts(curr_sim).Data;
-    spikes(curr_sim,:) = spikes_ts(curr_sim).Data;
-    interspike(curr_sim,:) = interspike_ts(curr_sim).Data;
+    recording(curr_sim,:) = recording_ts(curr_sim).Data(feature_buffer+1:end);
+    SWTTEO(curr_sim,:) = SWTTEO_ts(curr_sim).Data(feature_buffer+1:end);
+    threshold(curr_sim,:) = threshold_ts(curr_sim).Data(feature_buffer+1:end);
+    SWTTEO_above_th(curr_sim,:) = SWTTEO_above_th_ts(curr_sim).Data(feature_buffer+1:end);
+    spikes(curr_sim,:) = spikes_ts(curr_sim).Data(feature_buffer+1:end);
+    interspike(curr_sim,:) = interspike_ts(curr_sim).Data(feature_buffer+1:end);
 
 
+    ground_truth(curr_sim,:) = zeros(1,size(recording,2));
+    for train = 1:spiketrain
+        ground_truth(curr_sim,:) = ground_truth(curr_sim,:) + ground_truth_ts(curr_sim).Data((feature_buffer+1:end),train)';
+    end
 
     % Performance evaluation
     P(curr_sim) = sum(round(ground_truth(curr_sim,:)));    %P    %round due to some quantization error (some samples were e-11 instead of 0)
