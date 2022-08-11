@@ -73,12 +73,12 @@ for curr_sim = 1:numSims
     % to avoid the first 30s of recording to allow the achievement of the
     % convergence by the adaptive threshold except for PWM (in this case I
     % avoided just 1 second due to the length of the example signal)
-    recording(curr_sim,:) = recording_ts(curr_sim).Data(1,1,fs+1:end);
+    recording(curr_sim,:) = recording_ts(curr_sim).Data(fs+1:end);
     PWM(curr_sim,:) = PWM_ts(curr_sim).Data;
-    threshold(curr_sim,:) = threshold_ts(curr_sim).Data(1,1,fs+1:end);
-    sample_above_th(curr_sim,:) = sample_above_th_ts(curr_sim).Data(1,1,fs+1:end);
-    spikes(curr_sim,:) = spikes_ts(curr_sim).Data(1,1,fs+1:end);
-    interspike(curr_sim,:) = interspike_ts(curr_sim).Data(1,1,fs+1:end);
+    threshold(curr_sim,:) = threshold_ts(curr_sim).Data(fs+1:end);
+    sample_above_th(curr_sim,:) = sample_above_th_ts(curr_sim).Data(fs+1:end);
+    spikes(curr_sim,:) = spikes_ts(curr_sim).Data(fs+1:end);
+    interspike(curr_sim,:) = interspike_ts(curr_sim).Data(fs+1:end);
     
     ground_truth(curr_sim,:) = zeros(1,size(recording,2));
     for train = 1:spiketrain

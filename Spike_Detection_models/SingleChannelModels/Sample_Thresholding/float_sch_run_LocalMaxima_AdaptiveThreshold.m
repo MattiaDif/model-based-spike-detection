@@ -71,11 +71,11 @@ for curr_sim = 1:numSims
     % in the adaptive threshold model is necessary to avoid the performance
     % analysis in the initial part (see feature_buffer variable) of the
     % signal since it is necessary to the th computation
-    recording(curr_sim,:) = recording_ts(curr_sim).Data(1,1,feature_buffer+1:end);
-    sample_above_th(curr_sim,:) = sample_above_th_ts(curr_sim).Data(1,1,feature_buffer+1:end);
-    spikes(curr_sim,:) = spikes_ts(curr_sim).Data(1,1,feature_buffer+1:end);
-    interspike(curr_sim,:) = interspike_ts(curr_sim).Data(feature_buffer+1:end,1);
-    
+    recording(curr_sim,:) = recording_ts(curr_sim).Data(feature_buffer+1:end);
+    sample_above_th(curr_sim,:) = sample_above_th_ts(curr_sim).Data(feature_buffer+1:end);
+    spikes(curr_sim,:) = spikes_ts(curr_sim).Data(feature_buffer+1:end);
+    interspike(curr_sim,:) = interspike_ts(curr_sim).Data(feature_buffer+1:end);
+
     ground_truth(curr_sim,:) = zeros(1,size(recording,2));
     for train = 1:spiketrain
         ground_truth(curr_sim,:) = ground_truth(curr_sim,:) + ground_truth_ts(curr_sim).Data(feature_buffer+1:end,train)';
