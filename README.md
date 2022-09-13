@@ -66,5 +66,8 @@ For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gma
 
 1. Rehab Technologies IIT-INAIL Lab, Istituto Italiano di Tecnologia, Via Morego 30, 12 16163 Genova, Italy
 2. MathWorks, 1 Lakeside Campus Drive, Natick, MA 01760, USA
-3.  Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
+3. Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
 
+
+## REFERENCE
+For further information please refer to the scientific publication: [link](https://doi.org/10.1109/EMBC48229.2022.9871444)
