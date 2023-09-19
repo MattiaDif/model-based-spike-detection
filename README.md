@@ -1,4 +1,4 @@
-[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/105670-model-based-spike-detection)
+[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://it.mathworks.com/matlabcentral/fileexchange/135607-model-based-spike-detection)
 
 # Model-based online implementation of spike detection algorithms for neuroengineering applications
 
@@ -28,6 +28,7 @@ With this repo you can test and compare different spike detection models impleme
 ## Required Software
 
 1. MATLAB® and Simulink® version R2020a or later
+2. Signal Processing Toolbox
 
 
 ## Installation
@@ -53,7 +54,7 @@ Inside Spike_Detection_Models:
 
 ## Background
 
-Different spike detection models has been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
+Different spike detection models have been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
 1. Sample Thresholding: a spike is detected if the sample overcomes a threshold.
 2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content. A spike is detected if the NEO sample overcomes a threshold.
 3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
