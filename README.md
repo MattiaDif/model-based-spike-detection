@@ -71,6 +71,11 @@ For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gma
 3. Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
 
 
+## DOCUMENTATION
+
+You can find detailed documentation here: [docs](https://mattia-di-florio.gitbook.io/model-based-spike-detection/).
+
+
 ## REFERENCE
 For further information please refer to the scientific publication: [link](https://doi.org/10.1109/EMBC48229.2022.9871444)
 
