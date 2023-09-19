@@ -59,6 +59,11 @@ Different spike detection models has been developed in Simulink to investigate t
 3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
 
 
+## DOCUMENTATION
+
+You can find detailed documentation here: [docs](https://mattia-di-florio.gitbook.io/model-based-spike-detection/).
+
+
 ## CORE TEAM
 The following people have contributed to the current state of the project. Specifically:
 - Development: [Stefano Buccelli](https://www.iit.it/it/people-details/-/people/stefano-buccelli) [1], [Mattia Di Florio](https://rubrica.unige.it/personale/UUZFUllo) [1],[3].
@@ -69,11 +74,6 @@ For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gma
 1. Rehab Technologies IIT-INAIL Lab, Istituto Italiano di Tecnologia, Via Morego 30, 12 16163 Genova, Italy
 2. MathWorks, 1 Lakeside Campus Drive, Natick, MA 01760, USA
 3. Department of Informatics, Bioengineering, Robotics, System Engineering (DIBRIS), 20 University of Genova, Via all’Opera Pia 13, 16145, Genova, Italy
-
-
-## DOCUMENTATION
-
-You can find detailed documentation here: [docs](https://mattia-di-florio.gitbook.io/model-based-spike-detection/).
 
 
 ## REFERENCE
