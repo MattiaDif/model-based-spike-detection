@@ -1,6 +1,14 @@
 [![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://it.mathworks.com/matlabcentral/fileexchange/135607-model-based-spike-detection)
 
+<p align="center">
+
+<img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/spike_detection.png?raw=true" width="250">
+
+</p>
+
 # Model-based online implementation of spike detection algorithms for neuroengineering applications
+
+<br />
 
 Spike detection algorithms development in Simulink® to evaluate the preferable contestant for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. A Model-Based Design approach for neuroengineering applications enables to (i) simulate, and forecast pros and cons of the code execution on target hardware, and (ii) carry out preliminary analysis about the algorithms conduct in real-time.
 
