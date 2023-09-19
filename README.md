@@ -60,7 +60,7 @@ Different spike detection models has been developed in Simulink to investigate t
 
 
 ## CORE TEAM
-The following people have contributed to the current state of the project (24/01/2022). Specifically:
+The following people have contributed to the current state of the project. Specifically:
 - Development: [Stefano Buccelli](https://www.iit.it/it/people-details/-/people/stefano-buccelli) [1], [Mattia Di Florio](https://rubrica.unige.it/personale/UUZFUllo) [1],[3].
 - Conceptualization/Supervision: [Vijay Iyer](https://www.mathworks.com/matlabcentral/profile/authors/6910229) [2], [Akshay Rajhans](https://www.mathworks.com/matlabcentral/profile/authors/4409783) [2], [Stefano Buccelli](https://www.iit.it/it/people-details/-/people/stefano-buccelli) [1], [Michela Chiappalone](https://rubrica.unige.it/personale/UkNHWlNg) [1],[3].
 
