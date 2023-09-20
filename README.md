@@ -10,9 +10,9 @@
 
 <br />
 
-Spike detection algorithms development in Simulink® to evaluate the preferable contestant for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. A Model-Based Design approach for neuroengineering applications enables to (i) simulate, and forecast pros and cons of the code execution on target hardware, and (ii) carry out preliminary analysis about the algorithms conduct in real-time.
+Spike detection algorithms developed in Simulink® to evaluate the preferable contestant for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. A Model-Based Design approach for neuroengineering applications enables to (i) simulate, and forecast pros and cons of the code execution on target hardware, and (ii) carry out preliminary analysis about the algorithms conduct in real-time.
 
-With this repo you can test and compare different spike detection models implemented in Simulink to simulate real-time signal processing, or to evaluate the performance of different spike detection algorithms on your own signals. Test recordings are available so that you can try the repo functionalities. 
+With this repo you can test and compare different spike detection models implemented in Simulink to simulate real-time signal processing, or to evaluate the performance of a suite spike detection algorithms. Test recordings are available so that you can try the repo functionalities. 
 
 <br />
 
@@ -63,8 +63,8 @@ Inside Spike_Detection_Models:
 ## Background
 
 Different spike detection models have been developed in Simulink to investigate their feasibility in a real-time environment. The algorithms are subdivided among 3 main categories according to the spike detection methods found in literature:
-1. Sample Thresholding: a spike is detected if the sample overcomes a threshold.
-2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content. A spike is detected if the NEO sample overcomes a threshold.
+1. Sample Thresholding: a spike is detected if the sample overcomes a threshold or a combination of thresholds.
+2. Energy Operator: non-linear energy operator (NEO) computation to enhance the high frequency content of the signal. A spike is detected if the NEO sample overcomes a threshold.
 3. Template Matching: spike detection based on the similarity between a waveform and a template. A spike is detected if the similarity metric is greater than a set value.
 
 
