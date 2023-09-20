@@ -19,7 +19,7 @@ With this repo you can test and compare different spike detection models impleme
 <img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/models.png?raw=true" width="800">
 
 <p>
-    <b>Fig.1 - Spike detection models developed in both single- and multi-channel modality</b></figcaption>
+    <b>Fig.1 - Spike detection models current developed at the current state of the project</b></figcaption>
 </p>
 
 <br />
@@ -86,7 +86,7 @@ For any questions, please reach via email Mattia Di Florio (di.florio.mattia@gma
 
 
 ## REFERENCE
-For further information please refer to the scientific publication: [link](https://doi.org/10.1109/EMBC48229.2022.9871444)
+For further information please refer to the scientific publication: [link](https://doi.org/10.1109/EMBC48229.2022.9871444).
 
 If you use this repo, please cite:
 
