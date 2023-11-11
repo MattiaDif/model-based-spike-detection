@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/spike_detection.png?raw=true" width="250">
+<img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/spike-detection.png?raw=true" width="250">
 
 </p>
 
