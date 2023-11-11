@@ -1,5 +1,3 @@
-[![View model-based-spike-detection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://it.mathworks.com/matlabcentral/fileexchange/135607-model-based-spike-detection)
-
 <p align="center">
 
 <img src="https://github.com/MattiaDif/model-based-spike-detection/blob/main/img/spike-detection.png?raw=true" width="250">
