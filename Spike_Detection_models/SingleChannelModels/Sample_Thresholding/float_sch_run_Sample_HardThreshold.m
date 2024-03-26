@@ -16,7 +16,7 @@ mdl_name = "float_sch_Sample_HardThreshold";
 fs = 30000; %Hz - sampling frequency
 fn = fs/2;  %Hz - Nyquist frequency
 refractory = 10^-3; %refractory period
-th=[-80]; % sweeping  thresholds
+th=[-80, -70]; % sweeping  thresholds
 sim_type = 'normal'; %simulation speed
 sim_stop_time = '5';   %s
 
