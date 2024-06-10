@@ -10,7 +10,7 @@
 
 <br />
 
-Spike detection algorithms developed in Simulink® to evaluate the preferable contestant for the intended embedded (µC or Field Programmable Gate Array - FPGA) implementation. A Model-Based Design approach for neuroengineering applications enables to (i) simulate, and forecast pros and cons of the code execution on target hardware, and (ii) carry out preliminary analysis about the algorithms conduct in real-time.
+Neural spike detection algorithms developed in Simulink®.
 
 With this repo you can test and compare different spike detection models implemented in Simulink to simulate real-time signal processing, or to evaluate the performance of a suite spike detection algorithms. Test recordings are available so that you can try the repo functionalities. 
 
