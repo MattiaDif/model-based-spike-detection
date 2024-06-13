@@ -14,6 +14,6 @@ authors:
 - family-names: "Chiappalone"
   given-names: "Michela"
 title: "model-based-spike-detection"
-version: 1.0.0
+version: 0.4
 date-released: XX/XX/XXXX
 url: "https://github.com/MattiaDif/model-based-spike-detection"
